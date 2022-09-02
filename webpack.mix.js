@@ -1,5 +1,5 @@
 const mix = require('laravel-mix');
-// require('@tinypixelco/laravel-mix-wp-blocks');
+require('@tinypixelco/laravel-mix-wp-blocks');
 
 /* A Laravel Mix extension for Webpack bundle analyzer support */
 // require('laravel-mix-bundle-analyzer');
@@ -27,7 +27,7 @@ mix
 
   // Javascript
   .js('resources/scripts/app.js', 'scripts')
-  // .blocks('resources/scripts/editor.js', 'scripts')
+  .blocks('resources/scripts/editor.js', 'scripts')
   .autoload({ jquery: ['$', 'window.jQuery'] })
 
   // Styles
