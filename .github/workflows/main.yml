@@ -1,84 +1,54 @@
-name: Main
+# This is a basic workflow to help you get started with Actions
 
+name: Deployment
+
+# Controls when the workflow will run
 on:
+  # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    branches: [ "master" ]
+    
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  node:
-    name: Node ${{ matrix.node }}
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[ci skip]')"
-    strategy:
-      matrix:
-        node: ['16']
 
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Checkout the project
-        uses: actions/checkout@v3
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
 
-      - name: Setup the Node ${{ matrix.node }} environment on ${{ runner.os }}
-        uses: actions/setup-node@v2
+      - uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node }}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          node-version: 16.x
 
-      - name: Restore the Yarn cache directory
-        id: yarncache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - uses: actions/cache@v3
-        with:
-          path: ${{ steps.yarncache.outputs.dir }}
-          key: ${{ runner.os }}-${{ matrix.node }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: ${{ runner.os }}-${{ matrix.node }}-yarn-
-
-      - name: Install dependencies using Yarn
-        run: yarn install --frozen-lockfile
-
-      - name: Build and compile assets
+      # Runs a single command using the runners shell
+      - name: Install dependencies
         run: |
-          yarn build
-          cat public/entrypoints.json
-          cat public/manifest.json
+          composer Install
+          npm install
 
-  php:
-    name: PHP ${{ matrix.php }}
-    runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[ci skip]')"
-    strategy:
-      matrix:
-        php: ['7.4', '8.0', '8.1']
-
-    steps:
-      - name: Checkout the project
-        uses: actions/checkout@v3
-
-      - name: Setup the PHP ${{ matrix.php }} environment on ${{ runner.os }}
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: ${{ matrix.php }}
-          coverage: xdebug
+      # Runs a set of commands using the runners shell
+      - name: Build
+        run: npm run build:production
+      
+      - name: Sync
         env:
-          COMPOSER_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Restore the Composer cache directory
-        id: composercache
-        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
-
-      - uses: actions/cache@v3
-        with:
-          path: ${{ steps.composercache.outputs.dir }}
-          key: ${{ runner.os }}-${{ matrix.php }}-composer-${{ hashFiles('**/composer.json') }}
-          restore-keys: ${{ runner.os }}-${{ matrix.php }}-composer-
-
-      - name: Install Composer dependencies
-        run: composer install --no-progress --prefer-dist --optimize-autoloader --no-suggest
-
-      - name: Execute the PHP lint script
-        run: composer run-script lint
+          dest: 'u394528185@45.152.46.100:/public_html/wp-content/themes/sage-boilerplate'
+        run: |
+          echo "${{secrets.DEPLOY_KEY}}" > deploy_key
+          chmod 600 ./deploy_key
+          rsync -chav --delete \
+            -e 'ssh -i ./deploy_key -o StrictHostKeyChecking=no' \
+            --exclude /deploy_key \
+            --exclude /.git/ \
+            --exclude /.github/ \
+            --exclude /node_modules/ \
+            --exclude /vendor/ \
+            --exclude /public/ \
+            ./ ${{env.dest}}
