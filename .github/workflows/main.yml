@@ -50,5 +50,4 @@ jobs:
             --exclude /.github/ \
             --exclude /node_modules/ \
             --exclude /vendor/ \
-            --exclude /public/ \
             ./ ${{env.dest}}
