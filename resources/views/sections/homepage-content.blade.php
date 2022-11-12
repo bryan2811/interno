@@ -16,6 +16,17 @@
     <div class="second-block__content py-[135px] container">
       <h2 class="text-[53px] font-light text-white">{{ _e( 'Secure Identity', 'printscan' ) }}</h2>
       <h2 class="text-[53px] font-light text-white">{{ _e( 'Services and Solutions', 'printscan' ) }}</h2>
+      <div class="second-block__box">
+        <div class="flex w-full">
+          <img class="h-[460px]" src="@asset('/images/first.png');" alt="">
+          <div class="ml-[110px] flex flex-col justify-center text-white">
+            <h3 class="text-4xl font-normal">{{ _e( 'For Consumers', 'printscan' ) }}</h3>
+            <p class="font-light text-[18px] w-[55%]">{{ _e( 'Fingerprinting services for people complying with background checks and regulations.', 'printscan' ) }}</p>
+            <a class="uppercase text-white w-1/2 mt-8 bg-transparent hover:bg-green-700 border-white border transition-all font-normal rounded-[25px] py-3 px-4" href="#">Learn More</a>
+          </div>
+        </div>
+        <div class="w-1/2"></div>
+      </div>
     </div>
   </div>
 </div>
