@@ -1,11 +1,7 @@
-<a class="sr-only focus:not-sr-only" href="#main">
-  {{ __('Skip to content') }}
-</a>
-
 @include('partials.page-header')
 
   <main id="main" class="main">
-    @yield('content')
+    {{-- @yield('content') --}}
   </main>
 
   @hasSection('sidebar')
