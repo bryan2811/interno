@@ -29,5 +29,7 @@ class ThemeServiceProvider extends ServiceProvider
       if ($this->app->runningInConsole()) {
         $this->registerCommands();
       }
+
+      $this->registerHooks();
     }
 }

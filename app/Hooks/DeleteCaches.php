@@ -14,8 +14,8 @@ class DeleteCaches extends Hook
     ];
 
     protected $files = [
-        'themes/sage-boilerplate/storage/framework/cache/packages.php',
-        'themes/sage-boilerplate/storage/framework/cache/services.php'
+        'themes/printscan/storage/framework/cache/packages.php',
+        'themes/printscan/storage/framework/cache/services.php'
     ];
 
     public function __invoke()

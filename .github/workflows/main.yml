@@ -39,7 +39,7 @@
       
 #       - name: Sync
 #         env:
-#           dest: 'u394528185@45.152.46.100:/home/u394528185/public_html/wp-content/themes/sage-boilerplate'
+#           dest: 'u394528185@45.152.46.100:/home/u394528185/public_html/wp-content/themes/printscan'
 #         run: |
 #           echo "${{secrets.DEPLOY_KEY}}" > deploy_key
 #           chmod 600 ./deploy_key
