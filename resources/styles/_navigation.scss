@@ -1,0 +1,38 @@
+/** Desktop Navigation Styles **/
+#menu-header-menu ul.sub-menu {
+  display: none;
+}
+
+ul#menu-header-menu li:not(:has(>ul.sub-menu)) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(4.125rem * var(--tw-space-x-reverse));
+  margin-left: calc(4.125rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+ul#menu-header-menu li:has(>ul.sub-menu) {
+  position: relative;
+}
+
+ul#menu-header-menu li:has(>ul.sub-menu)::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 6px;
+  margin-left: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='8' viewBox='0 0 13 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 1L6.49942 6L1 1' stroke='white' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  top: 50%;
+}
+
+@screen lg {
+  #menu-header-menu li {
+    transition: all 0.18s ease-in-out;
+  }
+
+  #menu-header-menu li:hover {
+    transition: all 0.18s ease-in-out;
+    color: #40AE49;
+  }
+}
