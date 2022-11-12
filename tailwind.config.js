@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './resources/views/**/*.blade.php',
-  ],
+  content: ["./index.php", "./app/**/*.php", "./resources/**/*.{php,vue,js}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {}, // Extend Tailwind's default colors
+    },
   },
   plugins: [],
 }

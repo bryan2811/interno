@@ -9,6 +9,7 @@
   },
   "scripts": {
     "dev": "mix watch",
+    "build": "mix",
     "build:production": "mix --production",
     "translate": "yarn translate:pot && yarn translate:update",
     "translate:pot": "wp i18n make-pot . ./resources/lang/sage.pot --include=\"app,resources\"",
@@ -20,16 +21,16 @@
   "devDependencies": {
     "@roots/sage": "6.3.3",
     "@tinypixelco/laravel-mix-wp-blocks": "^1.1.0",
-    "@wordpress/dependency-extraction-webpack-plugin": "^3.2.1",
     "@wordpress/babel-preset-default": "^6.3.4",
     "@wordpress/browserslist-config": "^4.0.0",
-    "autoprefixer": "^10.4.7",
+    "@wordpress/dependency-extraction-webpack-plugin": "^3.2.1",
+    "autoprefixer": "^10.4.13",
     "browser-sync": "^2.27.10",
     "browser-sync-webpack-plugin": "2.3.0",
     "laravel-mix": "6.0.42",
-    "postcss": "^8.4.14",
+    "postcss": "^8.4.19",
     "sass": "^1.54.0",
     "sass-loader": "12.1.0",
-    "tailwindcss": "^3.1.6"
+    "tailwindcss": "^3.2.4"
   }
 }

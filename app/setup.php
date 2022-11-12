@@ -199,3 +199,12 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer',
     ] + $config);
 });
+
+/**
+ * Enqueue custom styles to the theme admin panel.
+ *
+ * @return void
+ */
+add_action('admin_head', function () {
+  wp_enqueue_style('sage/editor.css', asset('styles/editor.css')->uri(), false, null);
+});

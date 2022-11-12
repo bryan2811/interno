@@ -18,9 +18,7 @@ return [
     | Most template systems load templates from disk. Here you may specify
     | an array of paths that should be checked for your views.
     |
-    | Note: Our child themes have a root in leadbox-genius-child/resources
-    |       this requires adding a different view directory for child
-    |       partials overriding.
+    |
     */
 
     'paths' => array_filter([
