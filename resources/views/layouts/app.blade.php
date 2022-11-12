@@ -1,7 +1,7 @@
 @include('partials.page-header')
 
   <main id="main" class="main">
-    {{-- @yield('content') --}}
+    @yield('content')
   </main>
 
   @hasSection('sidebar')

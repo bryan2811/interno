@@ -1,8 +1,3 @@
-{{-- {{ var_dump($printscan_hero_tabs); }}
-@foreach($printscan_hero_tabs as $tab)
-{{ $tab['title'] }}
-@endforeach --}}
-
 <div class="w-full bg-[center_top_-2rem] bg-no-repeat bg-cover print-scan-hero bg-hero-image flex flex-col justify-between">
   <div class="container flex items-center w-full mx-auto hero-content pt-14">
     <div class="header-navigation-container space-x-[126px] flex w-full">
