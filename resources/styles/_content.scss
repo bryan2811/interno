@@ -1,0 +1,30 @@
+/** Hero **/
+@screen xl {
+  .tab-w-borders::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    border-left: 0.5px solid #FFFFFF;
+    height: calc(100% + 84px);
+  }
+
+  .tab-w-borders::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    border-left: 0.5px solid #FFFFFF;
+    height: calc(100% + 84px);
+  }
+}
+
+/** Second Block **/
+.second-block {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 49.4%);
+  background-image: url("/wp-content/themes/printscan/public/images/testing.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0%;
+  width: 100vw;
+}

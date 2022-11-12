@@ -13,7 +13,7 @@
       </div>
     </div>
   </div>
-  <div class="container flex flex-col w-full m-0 pl-[132px] hero-title">
+  <div class="container flex flex-col w-full m-0 pl-[132px] hero-title xl:pb-[84px]">
     <h1 class="text-white font-normal text-[85px] w-[35%]">{{ _e( 'Next Generation Identity.', 'printscan' ) }}</h1>
     <div class="grid w-full grid-cols-3 hero_tabs">
       <div class="flex flex-col first-column">
@@ -21,7 +21,7 @@
         <p class="text-2xl font-light text-white">{{ _e( 'Trusted Innovation.', 'printscan' ) }}</p>
       </div>
       @foreach($printscan_hero_tabs as $tab)
-        <div class="flex flex-col px-[50px] dinamic-tab text-white {{ $loop->index === 0 ? 'border-x border-white' : ''}}">
+        <div class="flex flex-col px-[50px] dinamic-tab text-white {{ $loop->index === 0 ? 'relative tab-w-borders' : ''}}">
           <p class="w-4/5 mb-4 text-3xl font-normal">{{ $tab['title'] }}</p>
           <p class="mb-5 text-lg font-light">{{ $tab['subtitle'] }}</p>
           <a class="w-1/2 text-center rounded-[20px] border-solid border text-base uppercase border-white py-[9px] px-4 text-white font-normal hover:border-[#40AE49] transition-all hover:transition-all" href="{{ $tab['link'] }}">Learn More</a>
