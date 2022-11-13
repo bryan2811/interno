@@ -27,6 +27,7 @@ class PrintScanInformation extends Composer
         return [
           'printscan_logo' => $this->getPrintScanLogo(),
           'printscan_hero_tabs' => $this->getHeroTabs(),
+          'printscan_services_tabs' => $this->getServicesTabs(),
         ];
     }
 
@@ -49,9 +50,22 @@ class PrintScanInformation extends Composer
      */
     public function getHeroTabs() : array
     {
-      return Cache::remember('printscan-hero_tabs', now()->endOfDay(), function () {
+      // return Cache::remember('printscan-hero_tabs', now()->endOfDay(), function () {
         return collect(carbon_get_theme_option( 'hero_tabs' ))
           ->all();
-      });
+      // });
+    }
+
+    /**
+     * Get the Homepage Services Tabs from Carbon Field Options
+     *
+     * @return array
+     */
+    public function getServicesTabs() : array
+    {
+      // return Cache::remember('printscan-services_tabs', now()->endOfDay(), function () {
+        return collect(carbon_get_theme_option( 'home_services' ))
+          ->all();
+      // });
     }
 }

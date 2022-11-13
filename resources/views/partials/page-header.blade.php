@@ -13,7 +13,7 @@
       </div>
     </div>
   </div>
-  <div class="container flex flex-col w-full m-0 pl-[132px] hero-title xl:pb-[84px]">
+  <div class="container flex flex-col w-full m-0 pl-[132px] hero-title xl:pb-[84px] mx-auto">
     <h1 class="text-white font-normal text-[85px] w-[35%]">{{ _e( 'Next Generation Identity.', 'printscan' ) }}</h1>
     <div class="grid w-full grid-cols-3 hero_tabs">
       <div class="flex flex-col first-column">

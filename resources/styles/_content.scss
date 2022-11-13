@@ -22,9 +22,26 @@
   position: relative;
   width: 100vw;
   margin-left: calc(-50vw + 49.4%);
-  background-image: url("/wp-content/themes/printscan/public/images/testing.png");
+  background-image: url("/wp-content/themes/printscan/public/images/second-block-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 0%;
   width: 100vw;
+}
+
+.second-block .second-block__button {
+  position: relative;
+}
+
+.second-block .second-block__button::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='9' height='18' viewBox='0 0 9 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 0.600098L8 9.00098L1 17.4001' stroke='white' stroke-miterlimit='10'/%3E%3C/svg%3E%0A");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 24px;
+  width: 15px;
+  height: 15px;
+  top: calc(50% - 7.5px);
 }

@@ -25,6 +25,15 @@ class CarbonFields extends Hook
               Field::make( 'text', 'subtitle', 'Subtitle' ),
               Field::make( 'text', 'link', 'Button Link' ),
             ) ),
+            Field::make( 'complex', 'home_services', 'Homepage Services Tabs' )
+            ->set_layout( 'tabbed-horizontal' )
+            ->add_fields( array(
+              Field::make( 'image', 'service_image', 'Service Image' )
+                ->set_value_type( 'url' ),
+              Field::make( 'text', 'title', 'Title' ),
+              Field::make( 'text', 'subtitle', 'Subtitle' ),
+              Field::make( 'text', 'link', 'Button Link' ),
+            ) ),
         ));
       });
 
