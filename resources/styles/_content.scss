@@ -45,3 +45,19 @@
   height: 15px;
   top: calc(50% - 7.5px);
 }
+
+/** Near Me Section **/
+.locations-section .boxes::-webkit-scrollbar {
+  width: 11px;
+  border-radius: 11px;
+}
+
+.locations-section .boxes::-webkit-scrollbar-track {
+  border-radius: 11px;
+  background: #ECF1FD;
+}
+
+.locations-section .boxes::-webkit-scrollbar-thumb {
+  border-radius: 11px;
+  background: #B6C9F3;
+}

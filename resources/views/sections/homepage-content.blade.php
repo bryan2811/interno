@@ -41,7 +41,7 @@
   </div>
 
   {{-- Fingerprinting Near Me - Section --}}
-  <div class="w-full near-me-section">
+  <div class="w-full near-me-section relative top-[-75px]">
     <div class="near-me-section__content flex xl:gap-6">
       <div class="w-3/5 map-search-section flex flex-col">
         <div class="search-section z-10 border-[0.5px] bg-white rounded-[15px] border-[#2C58BD] px-9 py-8">
@@ -72,9 +72,48 @@
           <iframe class="rounded-[15px]" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24174.2840317632!2d-74.0478384!3d40.7667422!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25782f1042d95%3A0xba005c0f7421780!2sUnion%20City%2C%20NJ%2007087%2C%20USA!5e0!3m2!1sen!2sar!4v1668355405177!5m2!1sen!2sar" width="100%" height="430" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
-      <div class="w-2/5 locations-section z-10 bg-white pl-9 pr-5 pt-8 pb-6 rounded-[15px]">
-        text
+      <div class="w-2/5 locations-section z-10 bg-white pl-9 pr-5 pt-8 pb-6 rounded-[15px] max-h-[600px] border-[0.5px] border-[#2C58BD]">
+        <div class="boxes overflow-y-auto h-full flex flex-col gap-10">
+          <div class="location-box leading-7 pb-8 border-b-[0.5px] border-[#2C58BD] mr-10">
+            <span class="text-[28px] leading-9 text-[#091F40] font-normal">Location</span>
+            <p class="font-light">1234 Street Name</p>
+            <p class="font-light">City, State 56789</p>
+            <p class="font-light">0.0 Miles | Directions</p>
+          </div>
+          <div class="location-box leading-7 pb-8 border-b-[0.5px] border-[#2C58BD] mr-10">
+            <span class="text-[28px] leading-9 text-[#091F40] font-normal">Location</span>
+            <p class="font-light">1234 Street Name</p>
+            <p class="font-light">City, State 56789</p>
+            <p class="font-light">0.0 Miles | Directions</p>
+          </div>
+          <div class="location-box leading-7 pb-8 border-b-[0.5px] border-[#2C58BD] mr-10">
+            <span class="text-[28px] leading-9 text-[#091F40] font-normal">Location</span>
+            <p class="font-light">1234 Street Name</p>
+            <p class="font-light">City, State 56789</p>
+            <p class="font-light">0.0 Miles | Directions</p>
+          </div>
+          <div class="location-box leading-7 pb-8 border-b-[0.5px] border-[#2C58BD] mr-10">
+            <span class="text-[28px] leading-9 text-[#091F40] font-normal">Location</span>
+            <p class="font-light">1234 Street Name</p>
+            <p class="font-light">City, State 56789</p>
+            <p class="font-light">0.0 Miles | Directions</p>
+          </div>
+          <div class="location-box leading-7 pb-8 mr-10">
+            <span class="text-[28px] leading-9 text-[#091F40] font-normal">Location</span>
+            <p class="font-light">1234 Street Name</p>
+            <p class="font-light">City, State 56789</p>
+            <p class="font-light">0.0 Miles | Directions</p>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+
+  {{-- Biometric Capabilities --}}
+  <div class="biometric-capabilities w-full mt-[90px]">
+    <h2 class="font-light text-[53px] text-[#091F40] leading-[65px] mb-6 w-[35%]">Biometric Capabilities for Your Business</h2>
+    <p class="text-[#54555B] font-light text-lg w-[70%]">PrintScan provides advanced fingerprinting and biometric systems to businesses, organizations, and
+      governments worldwide. Whether you are looking to offer fingerprinting services as a new or existing
+      organization or add fingerprinting capabilities into your workflow, PrintScan has the solution.</p>
   </div>
 </div>
