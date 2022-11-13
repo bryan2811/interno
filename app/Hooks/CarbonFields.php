@@ -18,14 +18,16 @@ class CarbonFields extends Hook
         ->add_fields( array(
           Field::make( 'image', 'site_logo', 'Site Logo' )
             ->set_value_type( 'url' ),
-            Field::make( 'complex', 'hero_tabs', 'Homepage Hero Tabs' )
+          Field::make( 'text', 'facebook_link', 'Facebook Link' ),
+          Field::make( 'text', 'linkedin_link', 'Linkedin Link' ),
+          Field::make( 'complex', 'hero_tabs', 'Homepage Hero Tabs' )
             ->set_layout( 'tabbed-horizontal' )
             ->add_fields( array(
               Field::make( 'text', 'title', 'Title' ),
               Field::make( 'text', 'subtitle', 'Subtitle' ),
               Field::make( 'text', 'link', 'Button Link' ),
             ) ),
-            Field::make( 'complex', 'home_services', 'Homepage Services Tabs' )
+          Field::make( 'complex', 'home_services', 'Homepage Services Tabs' )
             ->set_layout( 'tabbed-horizontal' )
             ->add_fields( array(
               Field::make( 'image', 'service_image', 'Service Image' )

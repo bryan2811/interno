@@ -110,10 +110,39 @@
   </div>
 
   {{-- Biometric Capabilities --}}
-  <div class="biometric-capabilities w-full mt-[90px]">
+  <div class="biometric-capabilities w-full mt-[90px] mb-9">
     <h2 class="font-light text-[53px] text-[#091F40] leading-[65px] mb-6 w-[35%]">Biometric Capabilities for Your Business</h2>
     <p class="text-[#54555B] font-light text-lg w-[70%]">PrintScan provides advanced fingerprinting and biometric systems to businesses, organizations, and
       governments worldwide. Whether you are looking to offer fingerprinting services as a new or existing
       organization or add fingerprinting capabilities into your workflow, PrintScan has the solution.</p>
+  </div>
+
+  {{-- Biometric Capabilities Cards --}}
+  <div class="biometric-cards grid grid-cols-1 xl:grid-cols-3 gap-[30px] text-white mb-[100px]">
+    <div class="card rounded-tr-[15px] rounded-bl-[15px] pb-[25px] pt-[48px] pl-10 pr-8">
+      <p class="card-top-title font-bold text-xl mb-[84px]">PRINTSCAN FINGERPRINTING KIOSK</p>
+      <p class="card-middle-title font-normal text-[27px] mb-[28px] leading-9">Increase revenue with a fingerprinting kiosk at your location.</p>
+      <span class="card-cta font-bold text-base bg-[#40AE49] py-[25px] pl-[37px] pr-[13px] flex relative bottom-[-25px] left-[-40px] rounded-bl-[15px] w-[calc(100%+4.5rem)]">Learn More</span>
+    </div>
+    
+    <div class="card rounded-tr-[15px] rounded-bl-[15px] pb-[25px] pt-[48px] pl-10 pr-8">
+      <p class="card-top-title font-bold text-xl mb-[84px]">PRINTSCAN FINGERPRINTING KIOSK</p>
+      <p class="card-middle-title font-normal text-[27px] mb-[28px] leading-9">Increase revenue with a fingerprinting kiosk at your location.</p>
+      <span class="card-cta font-bold text-base bg-[#40AE49]">Learn More</span>
+    </div>
+    <div class="card rounded-tr-[15px] rounded-bl-[15px] pb-[25px] pt-[48px] pl-10 pr-8">
+      <p class="card-top-title font-bold text-xl mb-[84px]">PRINTSCAN FINGERPRINTING KIOSK</p>
+      <p class="card-middle-title font-normal text-[27px] mb-[28px] leading-9">Increase revenue with a fingerprinting kiosk at your location.</p>
+      <span class="card-cta font-bold text-base bg-[#40AE49]">Learn More</span>
+    </div>
+  </div>
+
+  {{-- Schedule Card --}}
+  <div class="schedule-card w-full mb-[104px] flex pl-[130px] py-[70px] rounded-[15px] items-center pr-[170px]">
+    <h2 class="schedule-title text-[53px] leading-[65px] font-light text-white w-2/5">Ready to Get Fingerprinted</h2>
+    <div class="subtitle-button flex flex-col w-1/2 items-end">
+      <p class="schedule-subtitle text-white font-light text-[22px] leading-9 w-1/2">Make an appointment to get started.</p>
+      <button class="schedule-button uppercase text-white text-center w-1/2 mt-8 bg-transparent hover:bg-[#4277F0] border-white border transition-all font-normal rounded-[25px] py-3 px-4">Schedule Appointment</button>
+    </div>
   </div>
 </div>

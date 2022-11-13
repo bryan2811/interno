@@ -23,7 +23,7 @@ const tailwindcss = require('tailwindcss')
 mix
   // Public Path & BrowserSync Route
   .setPublicPath('./public')
-  .browserSync('bracketmedia.local')
+  .browserSync('http://localhost:3000/')
 
   // Javascript
   .js('resources/scripts/app.js', 'scripts')
