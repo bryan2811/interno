@@ -27,6 +27,7 @@
 
 ## Interfaz
 - [Head](https://github.com/bryan2811/printscan/blob/master/resources/views/head.blade.php)
+- [Header](https://github.com/bryan2811/printscan/blob/master/resources/views/partials/page-header.blade.php)
 - [Template Homepage](https://github.com/bryan2811/printscan/blob/master/resources/views/template-homepage.blade.php)
 - [Homepage Content](https://github.com/bryan2811/printscan/blob/master/resources/views/sections/homepage-content.blade.php)
 - [Mobile Navigation](https://github.com/bryan2811/printscan/blob/master/resources/views/sections/mobile-navigation.blade.php)
