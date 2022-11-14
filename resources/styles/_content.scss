@@ -63,12 +63,11 @@
 }
 
 /** Biometric Cards **/
-.biometric-cards .card {
+.biometric-cards .biometric-cards-link {
   position: relative;
-  z-index: -1;
 }
 
-.biometric-cards .card::before {
+.biometric-cards .biometric-cards-link::before {
   content: "";
   position: absolute;
   top: 0;
@@ -84,15 +83,26 @@
   z-index: -1;
 }
 
-.biometric-cards .card:nth-child(1)::before {
+.biometric-cards-link:hover {
+  -webkit-filter: brightness(70%);
+  filter: brightness(70%);
+  transform: scale(1.05);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.biometric-cards .biometric-cards-link:nth-child(1)::before {
   background-image: url("/wp-content/themes/printscan/public/images/first-card.png");
 }
 
-.biometric-cards .card:nth-child(2)::before {
+.biometric-cards .biometric-cards-link:nth-child(2)::before {
   background-image: url("/wp-content/themes/printscan/public/images/second-card.jpg");
 }
 
-.biometric-cards .card:nth-child(3)::before {
+.biometric-cards .biometric-cards-link:nth-child(3)::before {
   background-image: url("/wp-content/themes/printscan/public/images/third-card.jpg");
 }
 
