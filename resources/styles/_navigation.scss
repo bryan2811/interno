@@ -1,19 +1,32 @@
 /** Desktop Navigation Styles **/
 #menu-header-menu ul.sub-menu {
   display: none;
+  margin-top: 1rem;
+  background: white;
+  color: black;
+  padding: 1rem;
+  position: absolute;
+  min-width: 10rem;
+  top: 14px;
+  width: 100%;
+  border-radius: 5px;
 }
 
-ul#menu-header-menu li:not(:has(>ul.sub-menu)) {
+ul#menu-header-menu li:has(> ul.sub-menu) > a:hover + ul {
+  display: block;
+}
+
+ul#menu-header-menu > li:not(:has(>ul.sub-menu)) {
   --tw-space-x-reverse: 0;
   margin-right: calc(4.125rem * var(--tw-space-x-reverse));
   margin-left: calc(4.125rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-ul#menu-header-menu li:has(>ul.sub-menu) {
+ul#menu-header-menu li:has(>ul.sub-menu), ul#menu-header-menu > li:has(>ul.sub-menu) > a {
   position: relative;
 }
 
-ul#menu-header-menu li:has(>ul.sub-menu)::after {
+ul#menu-header-menu > li:has(>ul.sub-menu) > a::after {
   position: absolute;
   content: "";
   width: 10px;
@@ -31,7 +44,7 @@ ul#menu-header-menu li:has(>ul.sub-menu)::after {
     transition: all 0.18s ease-in-out;
   }
 
-  #menu-header-menu li:hover {
+  #menu-header-menu li a:hover {
     transition: all 0.18s ease-in-out;
     color: #40AE49;
   }

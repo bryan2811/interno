@@ -126,14 +126,14 @@
     </div>
     
     <div class="card rounded-tr-[15px] rounded-bl-[15px] pb-[25px] pt-[48px] pl-10 pr-8">
-      <p class="card-top-title font-bold text-xl mb-[84px]">PRINTSCAN FINGERPRINTING KIOSK</p>
-      <p class="card-middle-title font-normal text-[27px] mb-[28px] leading-9">Increase revenue with a fingerprinting kiosk at your location.</p>
-      <span class="card-cta font-bold text-base bg-[#40AE49]">Learn More</span>
+      <p class="card-top-title font-bold text-xl mb-[84px]">VAULT ID™ FINGERPRINT ARCHIVE</p>
+      <p class="card-middle-title font-normal text-[27px] mb-[28px] leading-9">Safeguard and transfer your fingerprints effortlessly.</p>
+      <span class="card-cta top-[61px] font-bold text-base bg-[#0B2142] py-[25px] pl-[37px] pr-[13px] flex relative bottom-[-25px] left-[-40px] rounded-bl-[15px] w-[calc(100%+4.5rem)]">Learn More</span>
     </div>
     <div class="card rounded-tr-[15px] rounded-bl-[15px] pb-[25px] pt-[48px] pl-10 pr-8">
-      <p class="card-top-title font-bold text-xl mb-[84px]">PRINTSCAN FINGERPRINTING KIOSK</p>
-      <p class="card-middle-title font-normal text-[27px] mb-[28px] leading-9">Increase revenue with a fingerprinting kiosk at your location.</p>
-      <span class="card-cta font-bold text-base bg-[#40AE49]">Learn More</span>
+      <p class="card-top-title font-bold text-xl mb-[84px]">PRINTSCAN SCHEDULER</p>
+      <p class="card-middle-title font-normal text-[27px] mb-[28px] leading-9">Schedule fingerprinting with one click directly from your system.</p>
+      <span class="card-cta font-bold top-[61px] text-base bg-[#2B89DF] py-[25px] pl-[37px] pr-[13px] flex relative bottom-[-25px] left-[-40px] rounded-bl-[15px] w-[calc(100%+4.5rem)]">Learn More</span>
     </div>
   </div>
 

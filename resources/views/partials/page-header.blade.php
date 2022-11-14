@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="container flex flex-col w-full m-0 pl-[132px] hero-title xl:pb-[84px] mx-auto">
-    <h1 class="text-white font-normal text-[85px] w-[35%]">{{ _e( 'Next Generation Identity.', 'printscan' ) }}</h1>
+    <h1 class="text-white font-normal text-[85px] w-[35%] xl:pt-[140px] xl:pb-[113px]">{{ _e( 'Next Generation Identity.', 'printscan' ) }}</h1>
     <div class="grid w-full grid-cols-3 hero_tabs">
       <div class="flex flex-col first-column">
         <p class="text-2xl font-light text-white">{{ _e( 'Secure Solutions.', 'printscan' ) }}</p>

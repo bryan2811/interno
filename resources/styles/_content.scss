@@ -75,7 +75,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/wp-content/themes/printscan/public/images/first-card.png");
   border-top-right-radius: 15px;
   border-bottom-left-radius: 15px;
   background-repeat: no-repeat;
@@ -83,6 +82,18 @@
   background-position: center center;
 
   z-index: -1;
+}
+
+.biometric-cards .card:nth-child(1)::before {
+  background-image: url("/wp-content/themes/printscan/public/images/first-card.png");
+}
+
+.biometric-cards .card:nth-child(2)::before {
+  background-image: url("/wp-content/themes/printscan/public/images/second-card.jpg");
+}
+
+.biometric-cards .card:nth-child(3)::before {
+  background-image: url("/wp-content/themes/printscan/public/images/third-card.jpg");
 }
 
 /** Schedule Card **/
@@ -105,6 +116,15 @@
   display: flex;
   flex-direction: column;
   gap: 9px;
+}
+
+.footer-company-link {
+  margin-top: 21px;
+}
+
+.footer-contact-link {
+  margin-top: 24px;
+  margin-bottom: 31px;
 }
 
 #menu-footer-menu > li > a, .footer-company-link, .footer-contact-link, #menu-footer-menu > li > ul.sub-menu > li {
