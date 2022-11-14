@@ -22,7 +22,7 @@
       @foreach ($printscan_services_tabs as $serviceTab)
         <div class="second-block__box mb-8 xl:mb-0">
           <div class="flex w-full flex-col xl:flex-row {{ $loop->even ? 'xl:flex-row-reverse' : '' }}">
-            <img class="h-auto xl:h-[460px] rounded-xl w-full xl:w-[48%]" src="{{ $serviceTab['service_image'] }}" alt="">
+            <img loading="lazy" class="h-auto xl:h-[460px] rounded-xl w-full xl:w-[48%]" src="{{ $serviceTab['service_image'] }}" alt="">
             <div class="flex flex-col justify-center text-white pt-8 xl:pt-0 {{ $loop->even ? 'xl:mr-[110px]' : 'xl:ml-[110px]' }}">
               <h3 class="text-4xl font-normal">{{ $serviceTab['title'] }}</h3>
               <p class="font-light text-[18px] w-full xl:w-[55%]">{{ $serviceTab['subtitle'] }}</p>
