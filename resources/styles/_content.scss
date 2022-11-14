@@ -118,14 +118,28 @@
 /** Footer **/
 #menu-footer-menu > li > a, .footer-company-link, .footer-contact-link {
   display: flex;
+  justify-content: center;
   margin-bottom: 11px;
   font-weight: bold;
 }
 
+@screen xl {
+  #menu-footer-menu > li > a, .footer-company-link, .footer-contact-link {
+    justify-content: flex-start;
+  }
+}
+
 #menu-footer-menu > li > ul.sub-menu {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 9px;
+}
+
+@screen xl {
+  #menu-footer-menu > li > ul.sub-menu {
+    align-items: flex-start;
+  }
 }
 
 .footer-company-link {
