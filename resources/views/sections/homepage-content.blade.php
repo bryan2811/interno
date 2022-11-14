@@ -8,7 +8,7 @@
     <div class="w-full xl:w-3/4 pb-16 xl:pb-0">
       <p class="text-[#091F40] font-light text-[28px] xl:text-[52px] text-center xl:text-left leading-[46px] xl:leading-[75px] mb-14 w-full pt-8 xl:pt-0">{{ _e('PrintScan is the leader in fingerprinting and biometric innovation with services around the world and convenient locations across the United States.', 'printscan') }}
       </p>
-      <a class="uppercase text-white bg-[#40AE49] hover:bg-green-700 transition-all font-normal rounded-[25px] py-3 px-4" href="#">{{ _e('Schedule Appointment', 'printscan') }}</a>
+      <a class="uppercase block lg:mx-auto max-w-[285px] schedule-button xl:mx-0 text-white bg-[#40AE49] hover:bg-green-700 transition-all font-normal rounded-[25px] py-3 px-4" href="#">{{ _e('Schedule Appointment', 'printscan') }}</a>
     </div>
   </div>
 
@@ -149,7 +149,7 @@
     <h2 class="schedule-title text-[40px] text-center xl:text-left xl:text-[53px] xl:leading-[65px] font-light text-white w-full xl:w-2/5">Ready to Get Fingerprinted</h2>
     <div class="subtitle-button flex flex-col w-full xl:w-1/2 items-end">
       <p class="schedule-subtitle text-white font-light text-[22px] leading-9 w-full xl:w-1/2">Make an appointment to get started.</p>
-      <button class="schedule-button uppercase text-white text-center w-full xl:w-1/2 mt-8 bg-transparent hover:bg-[#4277F0] border-white border transition-all font-normal rounded-[25px] py-3 px-4">Schedule Appointment</button>
+      <button class="schedule-button block uppercase text-white text-center w-full xl:w-1/2 mt-8 bg-transparent hover:bg-[#4277F0] border-white border transition-all font-normal rounded-[25px] py-3 px-4">Schedule Appointment</button>
     </div>
   </div>
 </div>
