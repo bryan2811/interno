@@ -31,6 +31,7 @@
 - [Homepage Content](https://github.com/bryan2811/printscan/blob/master/resources/views/sections/homepage-content.blade.php)
 - [Mobile Navigation](https://github.com/bryan2811/printscan/blob/master/resources/views/sections/mobile-navigation.blade.php)
 - [Footer](https://github.com/bryan2811/printscan/blob/master/resources/views/sections/footer.blade.php)
+- [Footer Custom Links](https://github.com/bryan2811/printscan/blob/master/resources/views/sections/footer-contact-links.blade.php)
 
 ## Estilos
 - [Styles](https://github.com/bryan2811/printscan/tree/master/resources/styles)

@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="w-full xl:w-4/6 grow">
-      <x-navigation menuName="Footer Menu" themeLocation="primary_navigation" menuClass="grid grid-cols-1 xl:grid-cols-3 text-[#091F40] text-sm gap-[65px] xl:gap-[130px]" />
+      <x-navigation menuName="Footer Menu" themeLocation="primary_navigation" menuClass="grid grid-cols-1 xl:grid-cols-3 text-[#091F40] text-sm gap-[65px] xl:gap-[130px] relative" />
     </div>
   </div>
 </footer>

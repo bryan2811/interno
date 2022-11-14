@@ -77,3 +77,11 @@ collect(['setup', 'filters', 'helpers'])
 */
 
 add_theme_support('sage');
+
+
+add_filter('wp_nav_menu_items', function($items, $args) {
+  if ($args->menu == 'Footer Menu' && $args->theme_location == 'primary_navigation') {
+    $items .= view('sections.footer-contact-links', [])->render();
+  }
+  return $items;
+}, 10, 2);

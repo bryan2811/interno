@@ -151,6 +151,16 @@
   margin-bottom: 31px;
 }
 
+.footer-contact-link {
+  padding-bottom: 2rem;
+}
+
+@screen xl {
+  .footer-contact-link {
+    padding-bottom: 0;
+  }
+}
+
 #menu-footer-menu > li > a, .footer-company-link, .footer-contact-link, #menu-footer-menu > li > ul.sub-menu > li {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
