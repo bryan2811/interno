@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://roots.io/sage/">
-    <img alt="Sage" src="https://raw.githubusercontent.com/bryan2811/printscan/master/resources/images/footer-logo.svg?token=GHSAT0AAAAAABWSRRCUWZNGWCI6NVA4YSOAY3RWAHQ" height="100">
+    <img alt="Sage" src="https://printscan.sagedevelopment.tech/wp-content/themes/printscan/public/images/footer-logo.svg" height="100">
   </a>
 </p>
 
