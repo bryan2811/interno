@@ -50,10 +50,10 @@ class PrintScanInformation extends Composer
      */
     public function getHeroTabs() : array
     {
-      // return Cache::remember('printscan-hero_tabs', now()->endOfDay(), function () {
+      return Cache::remember('printscan-hero_tabs', now()->endOfDay(), function () {
         return collect(carbon_get_theme_option( 'hero_tabs' ))
           ->all();
-      // });
+      });
     }
 
     /**
@@ -63,9 +63,9 @@ class PrintScanInformation extends Composer
      */
     public function getServicesTabs() : array
     {
-      // return Cache::remember('printscan-services_tabs', now()->endOfDay(), function () {
+      return Cache::remember('printscan-services_tabs', now()->endOfDay(), function () {
         return collect(carbon_get_theme_option( 'home_services' ))
           ->all();
-      // });
+      });
     }
 }

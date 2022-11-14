@@ -8,7 +8,7 @@
     <div class="w-full xl:w-3/4 pb-16 xl:pb-0">
       <p class="text-[#091F40] font-light text-[28px] xl:text-[52px] text-center xl:text-left leading-[46px] xl:leading-[75px] mb-14 w-full pt-8 xl:pt-0">{{ _e('PrintScan is the leader in fingerprinting and biometric innovation with services around the world and convenient locations across the United States.', 'printscan') }}
       </p>
-      <a class="uppercase block lg:mx-auto max-w-[285px] schedule-button xl:mx-0 text-white bg-[#40AE49] hover:bg-green-700 transition-all font-normal rounded-[25px] py-3 px-4" href="#">{{ _e('Schedule Appointment', 'printscan') }}</a>
+      <a class="uppercase block mx-auto max-w-[285px] schedule-button xl:mx-0 text-white bg-[#40AE49] hover:bg-green-700 transition-all font-normal rounded-[25px] py-3 px-4" href="#">{{ _e('Schedule Appointment', 'printscan') }}</a>
     </div>
   </div>
 
@@ -22,7 +22,7 @@
       @foreach ($printscan_services_tabs as $serviceTab)
         <div class="second-block__box mb-8 xl:mb-0">
           <div class="flex w-full flex-col xl:flex-row {{ $loop->even ? 'xl:flex-row-reverse' : '' }}">
-            <img class="h-auto xl:h-[460px] rounded-xl" src="{{ $serviceTab['service_image'] }}" alt="">
+            <img class="h-auto xl:h-[460px] rounded-xl w-full xl:w-[48%]" src="{{ $serviceTab['service_image'] }}" alt="">
             <div class="flex flex-col justify-center text-white pt-8 xl:pt-0 {{ $loop->even ? 'xl:mr-[110px]' : 'xl:ml-[110px]' }}">
               <h3 class="text-4xl font-normal">{{ $serviceTab['title'] }}</h3>
               <p class="font-light text-[18px] w-full xl:w-[55%]">{{ $serviceTab['subtitle'] }}</p>
@@ -42,7 +42,7 @@
 
   {{-- Fingerprinting Near Me - Section --}}
   <div class="w-full near-me-section relative top-[-75px]">
-    <div class="near-me-section__content flex xl:gap-6 flex-col xl:flex-row">
+    <div class="near-me-section__content flex gap-8 xl:gap-6 flex-col xl:flex-row">
       <div class="w-full xl:w-3/5 map-search-section flex flex-col">
         <div class="search-section z-10 border-[0.5px] bg-white rounded-[15px] border-[#2C58BD] px-9 py-8">
           <div class="texts flex text-[#54555B] font-medium text-lg pl-2 mb-2">
@@ -122,24 +122,24 @@
     <a class="biometric-cards-link" href="#">
       <div class="card rounded-tr-[15px] rounded-bl-[15px] pb-[25px] pt-[48px] pl-10 pr-8">
         <p class="card-top-title font-bold text-xl mb-[84px]">PRINTSCAN FINGERPRINTING KIOSK</p>
-        <p class="card-middle-title font-normal text-[27px] mb-[28px] leading-9">Increase revenue with a fingerprinting kiosk at your location.</p>
-        <span class="card-cta font-bold text-base bg-[#40AE49] py-[25px] pl-[37px] pr-[13px] flex relative bottom-[-25px] left-[-40px] rounded-bl-[15px] w-[calc(100%+4.5rem)]">Learn More</span>
+        <p class="card-middle-title font-normal text-[27px] mb-[28px] leading-9 pb-20">Increase revenue with a fingerprinting kiosk at your location.</p>
+        <span class="card-cta font-bold text-base bg-[#40AE49] py-[25px] pl-[37px] pr-[13px] flex rounded-bl-[15px] absolute bottom-0 left-0 right-0 w-full">Learn More</span>
       </div>
     </a>
     
     <a class="biometric-cards-link mb-[30px] xl:mb-0" href="#">
       <div class="card rounded-tr-[15px] rounded-bl-[15px] pb-[25px] pt-[48px] pl-10 pr-8">
         <p class="card-top-title font-bold text-xl mb-[84px]">VAULT ID™ FINGERPRINT ARCHIVE</p>
-        <p class="card-middle-title font-normal text-[27px] mb-[28px] leading-9">Safeguard and transfer your fingerprints effortlessly.</p>
-        <span class="card-cta top-[61px] font-bold text-base bg-[#0B2142] py-[25px] pl-[37px] pr-[13px] flex relative bottom-[-25px] left-[-40px] rounded-bl-[15px] w-[calc(100%+4.5rem)]">Learn More</span>
+        <p class="card-middle-title font-normal text-[27px] mb-[28px] leading-9 pb-20">Safeguard and transfer your fingerprints effortlessly.</p>
+        <span class="card-cta font-bold text-base bg-[#0B2142] py-[25px] pl-[37px] pr-[13px] flex rounded-bl-[15px] absolute bottom-0 left-0 right-0 w-full">Learn More</span>
       </div>
     </a>
 
     <a class="biometric-cards-link" href="#">
       <div class="card rounded-tr-[15px] rounded-bl-[15px] pb-[25px] pt-[48px] pl-10 pr-8">
         <p class="card-top-title font-bold text-xl mb-[84px]">PRINTSCAN SCHEDULER</p>
-        <p class="card-middle-title font-normal text-[27px] mb-[28px] leading-9">Schedule fingerprinting with one click directly from your system.</p>
-        <span class="card-cta font-bold top-[61px] text-base bg-[#2B89DF] py-[25px] pl-[37px] pr-[13px] flex relative bottom-[-25px] left-[-40px] rounded-bl-[15px] w-[calc(100%+4.5rem)]">Learn More</span>
+        <p class="card-middle-title font-normal text-[27px] mb-[28px] leading-9 pb-20">Schedule fingerprinting with one click directly from your system.</p>
+        <span class="card-cta font-bold text-base bg-[#2B89DF] py-[25px] pl-[37px] pr-[13px] flex rounded-bl-[15px] absolute bottom-0 left-0 right-0 w-full">Learn More</span>
       </div>
     </a>
   </div>
