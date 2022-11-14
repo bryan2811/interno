@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://roots.io/sage/">
+  <a href="https://printscan.sagedevelopment.tech/">
     <img alt="Sage" src="https://printscan.sagedevelopment.tech/wp-content/themes/printscan/public/images/footer-logo.svg" height="100">
   </a>
 </p>
