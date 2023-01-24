@@ -4,7 +4,7 @@ module.exports = {
   safelist: [
     "bg-[url('https://picsum.photos/1920/1080')]",
     "bg-[url('/wp-content/uploads/2023/01/interno-scaled.jpg')]",
-    "https://interno.sagedevelopment.tech/wp-content/uploads/2023/01/interno-scaled.jpg')]"
+    "bg-[url('https://interno.sagedevelopment.tech/wp-content/uploads/2023/01/interno-scaled.jpg')]"
   ],
   theme: {
     extend: {
