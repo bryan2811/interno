@@ -3,7 +3,8 @@ module.exports = {
   content: ["./index.php", "./app/**/*.php", "./resources/**/*.{php,vue,js}", "./resources/views/**/*.blade.php"],
   safelist: [
     "bg-[url('https://picsum.photos/1920/1080')]",
-    "bg-[url('/wp-content/uploads/2023/01/interno-scaled.jpg')]"
+    "bg-[url('/wp-content/uploads/2023/01/interno-scaled.jpg')]",
+    "https://interno.sagedevelopment.tech/wp-content/uploads/2023/01/interno-scaled.jpg')]"
   ],
   theme: {
     extend: {

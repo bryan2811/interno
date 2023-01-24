@@ -23,10 +23,6 @@ add_action('wp_enqueue_scripts', function () {
   wp_enqueue_style('sage/app.css', asset('styles/app.css')->uri(), false, null);
 }, 100);
 
-// register app.css in admin
-add_action('admin_enqueue_scripts', function () {
-  wp_enqueue_style('sage/app.css', asset('styles/app.css')->uri(), false, null);
-}, 100);
 
 /**
  * Add preload scripts
