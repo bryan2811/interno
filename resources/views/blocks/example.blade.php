@@ -1,14 +1,10 @@
 <div class="{{ $block->classes }}">
-  @if ($items)
-    <ul>
-      @foreach ($items as $item)
-        <li>{{ $item['item'] }}</li>
-      @endforeach
-    </ul>
-  @else
-    <p>{{ $block->preview ? 'Add an item...' : 'No items found!' }}</p>
-  @endif
-
+  <div class="w-full bg-cover bg-no-repeat bg-center h-screen text-secondary rounded-bl-[291px] flex items-center justify-center bg-[url({{"'". $background . "'"}})]">
+    <div class="flex flex-col w-1/2">
+      <h2 class="text-[85px]">{{ $title }}</h2>
+      <p class="text-xl">{{ $subtitle }}</p>
+    </div>
+  </div>
   <div>
     <InnerBlocks />
   </div>

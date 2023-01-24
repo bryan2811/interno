@@ -1,14 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.php", "./app/**/*.php", "./resources/**/*.{php,vue,js}"],
+  content: ["./index.php", "./app/**/*.php", "./resources/**/*.{php,vue,js}", "./resources/views/**/*.blade.php"],
+  safelist: [
+    "bg-[url('https://picsum.photos/1920/1080')]",
+    "bg-[url('/wp-content/uploads/2023/01/interno-scaled.jpg')]"
+  ],
   theme: {
     extend: {
-      colors: {}, // Extend Tailwind's default colors
-      backgroundImage: {
-        'hero-image': "url('/wp-content/themes/printscan/public/images/print-scan-hero.png')",
+      colors: {
+        primary: '#CDA274',
+        secondary: '#292F36',
+        tertiary: '#F4F0EC',
       },
       screens : {
-        '3xl': '1680px',
+        '3xl': '1536px',
       }
     },
     container: {

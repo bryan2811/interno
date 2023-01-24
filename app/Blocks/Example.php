@@ -33,7 +33,7 @@ class Example extends Block
      *
      * @var string|array
      */
-    public $icon = 'editor-ul';
+    public $icon = 'welcome-widgets-menus';
 
     /**
      * The block keywords.
@@ -93,7 +93,7 @@ class Example extends Block
         'align' => true,
         'align_text' => false,
         'align_content' => false,
-        'full_height' => false,
+        'full_height' => true,
         'anchor' => false,
         'mode' => false,
         'multiple' => true,
@@ -105,17 +105,7 @@ class Example extends Block
      *
      * @var array
      */
-    public $styles = [
-        [
-            'name' => 'light',
-            'label' => 'Light',
-            'isDefault' => true,
-        ],
-        [
-            'name' => 'dark',
-            'label' => 'Dark',
-        ]
-    ];
+    public $styles = [];
 
     /**
      * The block preview example data.
@@ -123,11 +113,9 @@ class Example extends Block
      * @var array
      */
     public $example = [
-        'items' => [
-            ['item' => 'Item one'],
-            ['item' => 'Item two'],
-            ['item' => 'Item three'],
-        ],
+      'title' => 'Example',
+      'subtitle' => 'Example',
+      'background' => 'https://picsum.photos/1920/1080',
     ];
 
     /**
@@ -137,9 +125,11 @@ class Example extends Block
      */
     public function with()
     {
-        return [
-            'items' => $this->items(),
-        ];
+      return [
+        'title' => get_field('title') ?: $this->example['title'],
+        'subtitle' => get_field('subtitle') ?: $this->example['subtitle'],
+        'background' => get_field('background')['url'] ?: $this->example['background'],
+      ];
     }
 
     /**
@@ -152,21 +142,12 @@ class Example extends Block
         $example = new FieldsBuilder('example');
 
         $example
-            ->addRepeater('items')
-                ->addText('item')
-            ->endRepeater();
+            ->addText('title')
+            ->addText('subtitle')
+            ->addImage('background');
+
 
         return $example->build();
-    }
-
-    /**
-     * Return the items field.
-     *
-     * @return array
-     */
-    public function items()
-    {
-        return get_field('items') ?: $this->example['items'];
     }
 
     /**

@@ -1,13 +1,5 @@
-@include('partials.page-header')
-
-  <main id="main" class="main">
-    @yield('content')
-  </main>
-
-  @hasSection('sidebar')
-    <aside class="sidebar">
-      @yield('sidebar')
-    </aside>
-  @endif
-
-@include('sections.footer')
+<div class="container w-full">
+  @include('sections.header')
+</div>
+    {!! the_content() !!}
+  @include('sections.footer')

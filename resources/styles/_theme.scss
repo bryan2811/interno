@@ -1,3 +1,8 @@
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Serif Display', serif;
+}
+
+/** Header **/
+ul#menu-interno > li>a:hover {
+  @apply text-primary transition-all;
 }
