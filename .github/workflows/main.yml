@@ -56,6 +56,4 @@ jobs:
         env:
           dest: 'u394528185@45.152.46.100:/home/u394528185/public_html/interno/wp-content/themes/interno'
         run: |
-          echo "${{secrets.DEPLOY_KEY}}" > deploy_key
-          chmod 600 ./deploy_key
-          ssh -p 65002 -i ./deploy_key -o StrictHostKeyChecking=no ${{env.dest}} 'wp cache flush && wp acorn package:discover && wp acorn cache:clear && wp acorn view:cache'
+          ssh -i ./deploy_key -p 65002 ${{env.dest}} "wp cache flush && wp acorn package:discover && wp acorn cache:clear && wp acorn view:cache"
