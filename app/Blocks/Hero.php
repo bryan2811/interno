@@ -5,21 +5,21 @@ namespace App\Blocks;
 use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class Example extends Block
+class Hero extends Block
 {
     /**
      * The block name.
      *
      * @var string
      */
-    public $name = 'Example';
+    public $name = 'Hero';
 
     /**
      * The block description.
      *
      * @var string
      */
-    public $description = 'A simple Example block.';
+    public $description = 'A simple Hero block.';
 
     /**
      * The block category.
@@ -108,13 +108,13 @@ class Example extends Block
     public $styles = [];
 
     /**
-     * The block preview example data.
+     * The block preview hero data.
      *
      * @var array
      */
-    public $example = [
-      'title' => 'Example',
-      'subtitle' => 'Example',
+    public $hero = [
+      'title' => 'Hero example title',
+      'subtitle' => 'Hero example subtitle',
       'background' => 'https://picsum.photos/1920/1080',
     ];
 
@@ -126,9 +126,9 @@ class Example extends Block
     public function with()
     {
       return [
-        'title' => get_field('title') ?: $this->example['title'],
-        'subtitle' => get_field('subtitle') ?: $this->example['subtitle'],
-        'background' => get_field('background')['url'] ?: $this->example['background'],
+        'title' => get_field('title') ?: $this->hero['title'],
+        'subtitle' => get_field('subtitle') ?: $this->hero['subtitle'],
+        'background' => get_field('background')['url'] ?: $this->hero['background'],
       ];
     }
 
@@ -139,15 +139,15 @@ class Example extends Block
      */
     public function fields()
     {
-        $example = new FieldsBuilder('example');
+        $hero = new FieldsBuilder('hero');
 
-        $example
+        $hero
             ->addText('title')
             ->addText('subtitle')
             ->addImage('background');
 
 
-        return $example->build();
+        return $hero->build();
     }
 
     /**
