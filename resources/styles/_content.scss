@@ -168,5 +168,5 @@
 }
 
 #menu-footer-menu > li > a:hover, #menu-footer-menu > li > ul.sub-menu > li:hover {
-  color: #40AE49;
+  @apply text-primary;
 }

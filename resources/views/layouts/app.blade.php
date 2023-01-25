@@ -2,4 +2,4 @@
   @include('sections.header')
 </div>
 {!! the_content() !!}
-{{-- @include('sections.footer') --}}
+@include('sections.footer')

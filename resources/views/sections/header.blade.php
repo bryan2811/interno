@@ -1,4 +1,4 @@
-<div class="flex flex-col justify-between xl:flex-row header py-11">
+<div class="flex flex-col justify-between lg:flex-row header py-11">
   <a href="/">
     <svg width="177" height="50" viewBox="0 0 177 50" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -9,8 +9,8 @@
   </a>
 
   <div class="flex items-center justify-between navigation-search gap-x-8">
-    <x-navigation menuName="Interno" themeLocation="primary_navigation" menuClass="text-secondary font-light flex-col xl:flex-row xl:space-x-14 flex" />
-    <button type="button">
+    <x-navigation menuName="Interno" themeLocation="primary_navigation" menuClass="text-secondary font-light flex-col lg:flex-row lg:space-x-14 flex" />
+    <button class="hidden lg:flex" type="button">
     <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g opacity="0.8">
         <path d="M16.6837 17.1844L21.9994 22.5001M19.375 10.6875C19.375 15.7616 15.2616 19.875 10.1875 19.875C5.11338 19.875 1 15.7616 1 10.6875C1 5.61338 5.11338 1.5 10.1875 1.5C15.2616 1.5 19.375 5.61338 19.375 10.6875Z" stroke="#141414"

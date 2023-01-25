@@ -45,7 +45,7 @@ ul#menu-header-menu > li:has(>ul.sub-menu) > a::after {
   }
 
   #menu-header-menu li a:hover {
+    @apply text-primary;
     transition: all 0.18s ease-in-out;
-    color: #40AE49;
   }
 }
