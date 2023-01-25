@@ -18,6 +18,9 @@ module.exports = {
         '3xl': '1536px',
       }
     },
+    fontFamily: {
+      'jost': ['Jost', 'sans-serif'],
+    },
     container: {
       center: true,
       padding: {
