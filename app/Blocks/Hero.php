@@ -116,6 +116,8 @@ class Hero extends Block
       'title' => 'Hero example title',
       'subtitle' => 'Hero example subtitle',
       'background' => 'https://picsum.photos/1920/1080',
+      'ctaLabel' => 'Get Started',
+      'ctaLink' => '#',
     ];
 
     /**
@@ -129,6 +131,8 @@ class Hero extends Block
         'title' => get_field('title') ?: $this->hero['title'],
         'subtitle' => get_field('subtitle') ?: $this->hero['subtitle'],
         'background' => get_field('background')['url'] ?: $this->hero['background'],
+        'ctaLabel' => get_field('ctaLabel') ?: $this->hero['ctaLabel'],
+        'ctaLink' => get_field('ctaLink') ?: $this->hero['ctaLink'],
       ];
     }
 
@@ -144,7 +148,13 @@ class Hero extends Block
         $hero
             ->addText('title')
             ->addText('subtitle')
-            ->addImage('background');
+            ->addImage('background')
+            ->addText('ctaLabel', [
+              'label' => 'Button Text'
+            ])
+            ->addText('ctaLink', [
+              'label' => 'Button Link'
+            ]);
 
 
         return $hero->build();
