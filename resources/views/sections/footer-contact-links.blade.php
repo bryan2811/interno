@@ -1,4 +1,4 @@
-<div class="absolute bottom-0 items-end footer-contact-links w-full grid grid-cols-1 xl:grid-cols-3 text-[#091F40] text-sm gap-[65px] xl:gap-[130px]">
+<div class="absolute bottom-0 items-end footer-contact-links w-full hidden xl:grid grid-cols-1 xl:grid-cols-3 text-[#091F40] text-sm gap-[65px] xl:gap-[130px]">
   <div></div>
   <div></div>
   <div class="footer-links flex gap-[27.5px] justify-center xl:justify-start">
