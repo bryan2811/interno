@@ -1,5 +1,5 @@
 {{--
-  Template Name: PrintScan Homepage
+  Template Name: interno Homepage
 --}}
 
 @extends('layouts.app')

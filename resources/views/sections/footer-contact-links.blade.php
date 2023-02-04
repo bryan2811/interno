@@ -2,7 +2,7 @@
   <div></div>
   <div></div>
   <div class="footer-links flex gap-[27.5px] justify-center xl:justify-start">
-    <a href="{{ carbon_get_theme_option('linkedin_link') }}">
+    <a href="#">
       <svg class="fill-[#091F40] hover:fill-primary transition-all" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M11.5793 9.9083C11.5793 10.8271 10.9946 11.5788 9.90879 11.5788C8.90649 11.5788 8.23828 10.8271 8.23828 9.99183C8.23828 9.07305 8.90649 8.23779 9.90879 8.23779C10.9111 8.23779 11.5793 8.98952 11.5793 9.9083Z" />
         <path d="M11.579 12.4104H8.24234V23.2555H11.579V12.4104Z" />
@@ -13,7 +13,7 @@
       </svg>
 
     </a>
-    <a href="{{ carbon_get_theme_option('facebook_link') }}">
+    <a href="#">
       <svg class="fill-[#091F40] hover:fill-primary transition-all" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M25.0752 31.4979H6.42267C2.87943 31.4979 0 28.6141 0 25.0752V6.42267C0 2.88383 2.88383 0 6.42267 0H25.0752C28.6185 0 31.4979 2.88383 31.4979 6.42267V25.0752C31.4979 28.6185 28.6185 31.4979 25.0752 31.4979ZM6.42267 1.75843C3.85096 1.75843 1.75843 3.85096 1.75843 6.42267V25.0752C1.75843 27.6469 3.85096 29.7395 6.42267 29.7395H25.0752C27.6469 29.7395 29.7395 27.6469 29.7395 25.0752V6.42267C29.7395 3.85096 27.6469 1.75843 25.0752 1.75843H6.42267Z" />

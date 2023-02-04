@@ -18,7 +18,7 @@ trait HasCommands
             return;
         }
 
-        WP_CLI::add_command('printscan', function ($args, $assoc_args) {
+        WP_CLI::add_command('interno', function ($args, $assoc_args) {
             /** @var Kernel */
             $kernel = $this->app->make(Kernel::class);
 

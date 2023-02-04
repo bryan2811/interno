@@ -23,7 +23,7 @@ class CacheClear extends Command
      *
      * @var string
      */
-    protected $description = 'Clears caches used in PrintScan theme.';
+    protected $description = 'Clears caches used in Interno theme.';
 
     public function handle()
     {

@@ -30,7 +30,7 @@ add_action('wp_enqueue_scripts', function () {
  * @return void
  */
 add_action('wp_head', function () {
-  $handles = apply_filters('printscan/scripts/preload', [
+  $handles = apply_filters('interno/scripts/preload', [
       'sage/app.js'
   ]);
 
@@ -53,7 +53,7 @@ add_action('wp_head', function () {
  * @return void
  */
 add_action('wp_head', function () {
-  $handles = apply_filters('printscan/styles/preload', [
+  $handles = apply_filters('interno/styles/preload', [
       'sage/app.css',
   ]);
 
