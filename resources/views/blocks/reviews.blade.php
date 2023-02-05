@@ -1,6 +1,6 @@
 <div class="{{ $block->classes }}">
   <div class="reviews-block">
-    <div class="reviews-block content bg-tertiary rounded-[70px] px-6 py-20">
+    <div class="reviews-block-content bg-tertiary rounded-[70px] px-6 py-20">
       <h2 class="text-5xl text-center mb-9">What the People Thinks About Us</h2>
       <div class="grid grid-cols-1 gap-5 xl:grid-cols-3">
         <div class="px-8 bg-white py-14 review-card rounded-3xl">

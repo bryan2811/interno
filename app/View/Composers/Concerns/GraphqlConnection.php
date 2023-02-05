@@ -40,6 +40,7 @@ trait GraphqlConnection {
 
       $response = wp_remote_request($endpoint, [
         'method' => 'POST',
+        'timeout' => 15,
         'headers' => [
             'Content-Type' => 'application/json'
         ],
@@ -81,6 +82,7 @@ trait GraphqlConnection {
 
     $response = wp_remote_request($endpoint, [
       'method' => 'POST',
+      'timeout' => 15,
       'headers' => [
         'Content-Type' => 'application/json',
         'Referer' => $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'],

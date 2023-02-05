@@ -5,21 +5,24 @@ namespace App\Blocks;
 use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class Brands extends Block
+use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
+
+class Projects extends Block
 {
     /**
      * The block name.
      *
      * @var string
      */
-    public $name = 'Brands';
+    public $name = 'Projects';
 
     /**
      * The block description.
      *
      * @var string
      */
-    public $description = 'A simple Brands block.';
+    public $description = 'A simple Projects block.';
 
     /**
      * The block category.
@@ -112,7 +115,10 @@ class Brands extends Block
      *
      * @var array
      */
-    public $example = [];
+    public $example = [
+      'title' => 'Project example title',
+      'subtitle' => 'Project example subtitle',
+    ];
 
     /**
      * Data to be passed to the block before rendering.
@@ -122,7 +128,9 @@ class Brands extends Block
     public function with()
     {
         return [
-          'brands' => $this->getBrands(),
+          'title' => get_field('title') ?: $this->example['title'],
+          'subtitle' => get_field('subtitle') ?: $this->example['subtitle'],
+          'projects' => $this->getProjects(),
         ];
     }
 
@@ -133,35 +141,47 @@ class Brands extends Block
      */
     public function fields()
     {
-        $brands = new FieldsBuilder('brands');
+        $projects = new FieldsBuilder('projects');
 
-        $brands
-            ->addSelect('sort_by_brand_name', [
-                'label' => 'Sort By Brand Name',
+        // create a select for filter by project categorie
+        $projects
+            ->addText('title')
+            ->addTextarea('subtitle')
+            ->addSelect('project_category', [
+                'label' => 'Filter by project category',
                 'choices' => [
-                    'asc' => 'A-Z',
-                    'desc' => 'Z-A',
+                    'all' => 'All',
+                    'decor_design' => 'Decor / Design',
+                    'decor_mockup' => 'Decor / Mockup',
+                    'decor_architecture' => 'Decor / Architecture',
                 ],
-                'default_value' => 'asc',
+                'default_value' => 'all',
             ]);
 
-        return $brands->build();
+        return $projects->build();
     }
 
-    public function getBrands() : array
+    public function getProjects() : array
     {
-        $brands = get_posts([
-            'post_type' => 'brands',
+        $projects = get_posts([
+            'post_type' => 'projects',
             'posts_per_page' => -1,
-            'order' => get_field('sort_by_brand_name'),
+            'order' => 'ASC',
         ]);
 
-        return array_map(function ($brand) {
-            return [
-                'name' => get_field('brand_name', $brand->ID),
-                'image' => get_field('brand_image', $brand->ID),
-            ];
-        }, $brands);
+        $blockSelectCategory = collect(get_field_object('project_category')['choices'])->filter(function ($choice, $key) {
+          return get_field('project_category') === $key;
+        })->first();
+
+        return collect($projects)->map(function ($project) {
+          return [
+            'name' => get_field('project_name', $project->ID),
+            'category' => get_field('project_categorie', $project->ID),
+            'image' => get_field('project_image', $project->ID),
+          ];
+        })->filter(function ($project) use ($blockSelectCategory) {
+          return Str::lower($blockSelectCategory) === 'all' || Str::lower($project['category']) === Str::lower($blockSelectCategory);
+        })->take(4)->toArray();
     }
 
     /**
