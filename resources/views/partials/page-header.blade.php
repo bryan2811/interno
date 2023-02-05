@@ -1,4 +1,4 @@
-@include('sections.mobile-navigation')
+{{-- @include('sections.mobile-navigation')
 
 <div class="w-full bg-[center_top_-2rem] bg-no-repeat bg-cover print-scan-hero bg-hero-image flex flex-col justify-between">
   <div class="container lg:flex items-center w-full mx-auto hero-content pt-14 hidden">
@@ -31,4 +31,4 @@
       @endforeach
     </div>
   </div>
-</div>
+</div> --}}
