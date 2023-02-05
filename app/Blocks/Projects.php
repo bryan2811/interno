@@ -143,7 +143,6 @@ class Projects extends Block
     {
         $projects = new FieldsBuilder('projects');
 
-        // create a select for filter by project categorie
         $projects
             ->addText('title')
             ->addTextarea('subtitle')
