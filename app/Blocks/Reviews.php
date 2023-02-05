@@ -112,7 +112,9 @@ class Reviews extends Block
      *
      * @var array
      */
-    public $example = [];
+    public $example = [
+      'title' => 'Reviews Example Title',
+    ];
 
     /**
      * Data to be passed to the block before rendering.
@@ -122,7 +124,8 @@ class Reviews extends Block
     public function with()
     {
         return [
-
+          'title' => get_field('title') ?: $this->example['title'],
+          'reviews' => $this->getReviews(),
         ];
     }
 
@@ -135,9 +138,41 @@ class Reviews extends Block
     {
         $reviews = new FieldsBuilder('reviews');
 
+        $reviews
+            ->addText('title');
+
         $reviews;
 
         return $reviews->build();
+    }
+
+    /**
+     *  The function getReviews returns an array of reviews.
+     *
+     *  - It retrieves all the posts of post type 'reviews' using the get_posts function and stores the result in the $reviews variable.
+     *  The number of posts per page is set to -1, meaning it will retrieve all the posts available, and the order of posts is ascending.
+     *
+     * - Finally, the $reviews variable is collected into a collection using the collect function. The collection is then mapped to extract the
+     *  image, name, location and review of each review. The final result is converted to an array using the toArray function and returned.
+     *
+     * @return array
+     */
+    public function getReviews() : array
+    {
+        $reviews = get_posts([
+            'post_type' => 'reviews',
+            'posts_per_page' => -1,
+            'order' => 'ASC'
+        ]);
+
+        return collect($reviews)->map(function ($review) {
+          return [
+              'image' => get_field('user_image', $review->ID),
+              'name' => get_field('user_name', $review->ID),
+              'location' => get_field('user_location', $review->ID),
+              'review' => get_field('user_review', $review->ID),
+          ];
+        })->toArray();
     }
 
     /**

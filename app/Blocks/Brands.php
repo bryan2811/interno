@@ -5,6 +5,8 @@ namespace App\Blocks;
 use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
+use Illuminate\Support\Collection;
+
 class Brands extends Block
 {
     /**
@@ -148,6 +150,18 @@ class Brands extends Block
         return $brands->build();
     }
 
+    /**
+     *  The function getBrands returns an array of brands.
+     *
+     *  - It retrieves all the posts of post type 'brands' using the get_posts function and stores the result in the $brands variable.
+     *  The number of posts per page is set to -1, meaning it will retrieve all the posts available, and the order of posts is set to the
+     *  value of the 'sort_by_brand_name' field using the get_field function.
+     *
+     * - Finally, the $brands variable is collected into a collection using the collect function. The collection is then mapped to extract the name
+     *  and image of each brand. The final result is converted to an array using the toArray function and returned.
+     *
+     * @return array
+     */
     public function getBrands() : array
     {
         $brands = get_posts([
@@ -156,12 +170,12 @@ class Brands extends Block
             'order' => get_field('sort_by_brand_name'),
         ]);
 
-        return array_map(function ($brand) {
-            return [
-                'name' => get_field('brand_name', $brand->ID),
-                'image' => get_field('brand_image', $brand->ID),
-            ];
-        }, $brands);
+        return collect($brands)->map(function ($brand) {
+          return [
+              'name' => get_field('brand_name', $brand->ID),
+              'image' => get_field('brand_image', $brand->ID),
+          ];
+        })->toArray();
     }
 
     /**

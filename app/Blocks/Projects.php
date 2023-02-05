@@ -160,6 +160,22 @@ class Projects extends Block
         return $projects->build();
     }
 
+    /**
+     *  The function getProjects returns an array of projects.
+     *
+     *  - It first retrieves all the posts of post type 'projects' using the get_posts function and stores the result in the $projects variable.
+     *  The number of posts per page is set to -1, meaning it will retrieve all the posts available, and the order of posts is set to 'ASC' (ascending order).
+     *
+     *  - The variable $blockSelectCategory is assigned the result of a collection of the choices field of the 'project_category' field group.
+     *  The collection is filtered to get the first element that matches the value of the 'project_category' field.
+     *
+     *  - Finally, the $projects variable is mapped to extract relevant information from each post. The information includes the name, category,
+     *  and image of each project. The returned collection is filtered based on whether the selected category is 'all' or if the
+     *  project's category matches the selected category. The final result is taken as the first 4 elements of the collection and converted
+     *  to an array before it is returned.
+     *
+     * @return array
+     */
     public function getProjects() : array
     {
         $projects = get_posts([
