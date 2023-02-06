@@ -31,10 +31,12 @@ class Navigation extends Component
     /**
      * Create a new component instance.
      *
-     * The function takes three arguments, assigns them to three properties, and then does nothing else
-     * @param menuName The name of the menu you want to display.
-     * @param themeLocation This is the name of the theme location that you want to display.
-     * @param menuClass The class that will be applied to the ul element which forms the menu.
+     * The constructor sets the `menuName`, `themeLocation`, and `menuClass` properties to the values of the
+     * `$menuName`, `$themeLocation`, and `$menuClass` arguments, respectively.
+     *
+     * @param string $menuName      The name of the menu to display.
+     * @param string $themeLocation The name of the theme location to display.
+     * @param string $menuClass     The class to apply to the `ul` element that forms the menu.
      *
      * @return void
      */
