@@ -112,7 +112,7 @@ class Hero extends Block
      *
      * @var array
      */
-    public $hero = [
+    public $example = [
       'title' => 'Hero example title',
       'subtitle' => 'Hero example subtitle',
       'background' => 'https://picsum.photos/1920/1080',
@@ -128,11 +128,11 @@ class Hero extends Block
     public function with()
     {
       return [
-        'title' => get_field('title') ?: $this->hero['title'],
-        'subtitle' => get_field('subtitle') ?: $this->hero['subtitle'],
-        'background' => get_field('background')['url'] ?: $this->hero['background'],
-        'ctaLabel' => get_field('ctaLabel') ?: $this->hero['ctaLabel'],
-        'ctaLink' => get_field('ctaLink') ?: $this->hero['ctaLink'],
+        'title' => get_field('title') ?: $this->example['title'],
+        'subtitle' => get_field('subtitle') ?: $this->example['subtitle'],
+        'background' => get_field('background')['url'] ?: $this->example['background'],
+        'ctaLabel' => get_field('ctaLabel') ?: $this->example['ctaLabel'],
+        'ctaLink' => get_field('ctaLink') ?: $this->example['ctaLink'],
       ];
     }
 
